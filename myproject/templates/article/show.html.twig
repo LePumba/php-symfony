@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+{% block title %}
+    Lire : {{ titre }}
+{% endblock %}
+
+{% block body %}
+    {{ titre }}
+
+    {% for comment in comments %}
+        <p>{{ comment }}</p>
+    {% endfor %}
+
+    <p>il y a {{ comments|length }} commentaires.</p>
+
+    Lorem ipsum dolor sit amet. {{ maVariable }}
+
+{% endblock %}
